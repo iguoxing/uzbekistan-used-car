@@ -9,8 +9,11 @@
 | `/` | 门户首页 |
 | `/report.html` | 完整分析报告（四维度验证、趋势图、行动建议、来源清单） |
 | `/dashboard.html` | Top200 客户交互看板（搜索 / 筛选 / 排序 / 导出 CSV） |
+| `/methodology.html` | B2B 决策人线索挖掘方法精要（4 页，独立访问地址，首页 03 号卡片入口） |
 
-两份页面均为自包含 HTML：图表由内联 SVG 脚本绘制，数据内联注入，不依赖任何 CDN，离线可用。
+三份页面均为自包含 HTML：图表由内联 SVG 脚本绘制，数据内联注入，不依赖任何 CDN，离线可用；`methodology.html` 为自包含单页文档，支持浏览器打印为 A4 PDF。
+
+**固定独立地址**：`https://uzbekistan.used-car.cn/methodology.html`（备用 `https://iguoxing.github.io/uzbekistan-used-car/methodology.html`）。后续更新站点其他页面不会改动此路径；源稿位于 `2026-11-14-08-04-47/乌兹别克斯坦B2B决策人挖掘_方法论手册.html`，更新时覆盖本文件即可。
 
 ## 部署
 

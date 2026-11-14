@@ -32,6 +32,12 @@ h2{font-size:17px;margin:0 0 6px;font-weight:650}
 .card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px 26px 22px;transition:.18s;position:relative;overflow:hidden}
 .card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--teal)}
 .card.b:before{background:var(--blue)}
+.card.c{grid-column:1 / -1}
+.card.c:before{background:var(--violet)}
+.card.c p{min-height:0}
+.card.c .go{color:var(--violet);border-color:rgba(167,139,250,.45)}
+.card.c:hover .go{background:rgba(167,139,250,.14)}
+.card.c li:before{background:var(--violet)}
 .card:hover{background:var(--panel2);border-color:#3a5674;transform:translateY(-2px)}
 .card .no{font-size:11px;letter-spacing:.16em;color:var(--dim);margin-bottom:12px}
 .card h3{font-size:21px;margin:0 0 10px;font-weight:700}
@@ -66,7 +72,7 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding:22px 0 40px;colo
 
 <main class="wrap">
   <h2>选择你要看的内容</h2>
-  <p class="sec-sub">两份页面均为自包含离线页面，无需联网加载图表库。</p>
+  <p class="sec-sub">三份页面均为自包含离线页面，无需联网加载图表库；方法精要可单独打开或打印为 PDF。</p>
   <div class="cards">
     <a class="card" href="report.html">
       <div class="no">01 / RESEARCH REPORT</div>
@@ -91,6 +97,17 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding:22px 0 40px;colo
         <li>官方授权体系单独列示</li>
       </ul>
       <span class="go">打开看板 →</span>
+    </a>
+    <a class="card c" href="methodology.html">
+      <div class="no">03 / PLAYBOOK · 单独地址 /methodology.html</div>
+      <h3>决策人线索挖掘方法精要</h3>
+      <p>从「3000 条名单只出 1 个决策人」到 4,432 家独立主体、2,420 组姓名+电话的可复用方法：诊断逻辑、三重主键、数据源栈、8 步执行顺序、质量闸门与迭代教训。4 页精要版，可直接打印。</p>
+      <ul>
+        <li>主体识别 → 身份锁定 → 号码获取 → 交叉验证</li>
+        <li>深翻分页造种子池，把一次性任务变成可续跑管线</li>
+        <li>OKED + 名称特征词 + 全名校验守住质量口径</li>
+      </ul>
+      <span class="go">打开方法精要 →</span>
     </a>
   </div>
 

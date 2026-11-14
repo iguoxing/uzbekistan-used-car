@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>决策人挖掘方法精要 · 乌兹别克斯坦 | Eastar Motors</title>
+<style>
+:root{
+  --navy:#12305c; --navy2:#1c447f; --ink:#1b2430; --muted:#5b6878;
+  --line:#d8e0ea; --soft:#f4f7fb; --soft2:#eef3f9;
+  --orange:#c1531b; --green:#1d7355; --red:#a5272c;
+}
+@page{ size:A4; margin:15mm 14mm 16mm 14mm;
+  @bottom-left{ content:"乌兹别克斯坦 B2B 决策人线索挖掘 · 方法精要 v2.0"; font-size:7.5pt; color:#7a8698; }
+  @bottom-right{ content:"第 " counter(page) " / " counter(pages) " 页"; font-size:7.5pt; color:#7a8698; }
+}
+*{ box-sizing:border-box; }
+body{ margin:0; font-family:"PingFang SC","Hiragino Sans GB","STHeiti","Microsoft YaHei",sans-serif;
+  font-size:9pt; line-height:1.5; color:var(--ink); background:#fff; }
+h1,h2,h3{ color:var(--navy); margin:0; font-weight:700; line-height:1.3; }
+p{ margin:4pt 0; }
+a{ color:var(--navy2); text-decoration:none; }
+ul,ol{ margin:4pt 0 6pt 0; padding-left:16pt; }
+li{ margin:2pt 0; }
+code{ font-family:"SF Mono","Menlo","Courier New",monospace; font-size:8.2pt;
+  background:#eef2f7; padding:1pt 3pt; border-radius:2pt; color:#123a68; }
+pre{ font-family:"SF Mono","Menlo","Courier New",monospace; font-size:7.6pt; line-height:1.4;
+  background:#f5f8fc; border:1px solid var(--line); border-left:3px solid var(--navy2);
+  padding:5pt 8pt; margin:5pt 0; white-space:pre-wrap; word-break:break-all; color:#243447; }
+table{ width:100%; border-collapse:collapse; margin:5pt 0 8pt 0; font-size:8.1pt; }
+th{ background:var(--navy); color:#fff; text-align:left; padding:4pt 6pt; font-weight:600;
+  border:1px solid var(--navy); font-size:8pt; }
+td{ padding:3.2pt 6pt; border:1px solid var(--line); vertical-align:top; line-height:1.4; }
+tbody tr:nth-child(even) td{ background:#f7fafd; }
+thead{ display:table-header-group; }
+tr{ break-inside:avoid; }
+.small{ font-size:7.7pt; color:var(--muted); }
+.tag{ display:inline-block; padding:0 5pt; border-radius:7pt; font-size:7.3pt; font-weight:700;
+  color:#fff; background:var(--navy2); white-space:nowrap; }
+.tag.ok{ background:var(--green); } .tag.new{ background:var(--orange); }
+.box{ border:1px solid var(--line); border-left:3px solid var(--navy2); background:var(--soft);
+  padding:5pt 9pt; margin:6pt 0; font-size:8.4pt; }
+.box.warn{ border-left-color:var(--orange); background:#fdf6f0; }
+.box.good{ border-left-color:var(--green); background:#f1f8f4; }
+.box.bad{ border-left-color:var(--red); background:#fdf2f2; }
+.box .bt{ font-weight:700; color:var(--navy); display:block; margin-bottom:2pt; }
+.kpi{ width:100%; border-collapse:separate; border-spacing:4pt; margin:6pt 0 8pt 0; }
+.kpi td{ width:25%; background:var(--soft2); border:1px solid var(--line); text-align:center;
+  padding:6pt 3pt; vertical-align:middle; }
+.kpi .n{ font-size:15pt; font-weight:800; color:var(--navy); display:block; line-height:1.2; }
+.kpi .l{ font-size:7.8pt; color:var(--muted); display:block; margin-top:2pt; }
+.page{ page-break-before:always; }
+.page.first{ page-break-before:auto; }
+.masthead{ border-bottom:2.5pt solid var(--navy); padding-bottom:7pt; margin-bottom:12pt; }
+.masthead .eyebrow{ font-size:8pt; color:var(--orange); font-weight:700; }
+.masthead h1{ font-size:19pt; margin:3pt 0 2pt 0; }
+.masthead .sub{ font-size:8.6pt; color:var(--muted); }
+.chapter{ border-bottom:1.5pt solid var(--navy); padding-bottom:3pt; margin:0 0 8pt 0; }
+.chapter .no{ font-size:8pt; color:var(--orange); font-weight:700; display:block; }
+.chapter h2{ font-size:14pt; }
+h3{ font-size:10.3pt; margin:9pt 0 4pt 0; padding-left:7pt; border-left:3pt solid var(--orange); }
+.flow{ width:100%; border-collapse:separate; border-spacing:0; margin:6pt 0 8pt 0; }
+.flow td{ border:1px solid var(--line); background:var(--soft); padding:6pt 3pt; text-align:center;
+  font-size:8.2pt; font-weight:600; color:var(--navy); }
+.flow td.arw{ border:none; background:transparent; width:14pt; color:var(--orange); font-size:11pt; padding:0; }
+.steps{ margin:4pt 0 7pt 0; padding-left:18pt; list-style:decimal; }
+.steps li{ padding:2.5pt 0; margin:0 0 2pt 0; border-bottom:1px dotted var(--line); font-size:8.5pt; }
+.steps li::marker{ color:var(--orange); font-weight:700; }
+.src{ font-size:7.7pt; color:var(--muted); word-break:break-all; }
+.hl{ background:#fff3cd; padding:0 2pt; }
+.sig{ margin-top:10pt; padding-top:6pt; border-top:1px solid var(--line); font-size:7.7pt; color:var(--muted); }
+.nav{ display:none; }
+@media screen{
+  body{ background:#e9eef5; padding:0 0 40px 0; }
+  .page{ width:210mm; min-height:297mm; margin:24px auto 0; padding:15mm 14mm 16mm 14mm;
+    background:#fff; page-break-before:auto; box-shadow:0 6px 28px rgba(18,48,92,.15); }
+  .nav{ display:block; width:210mm; margin:18px auto 0; background:#12305c; color:#d7e7fb;
+    padding:8pt 12pt; font-size:8.5pt; border-radius:4pt; }
+  .nav a{ color:#d7e7fb; margin-right:14pt; }
+  .nav a:hover{ text-decoration:underline; }
+}
+@media screen and (max-width:760px){
+  .nav{ width:auto; margin:12px; font-size:8pt; }
+  .page{ width:auto; min-height:0; margin:12px; padding:18px 14px; }
+  table{ font-size:7.4pt; }
+  .kpi .n{ font-size:12pt; }
+  .flow td{ font-size:7.4pt; }
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="index.html">← 返回项目首页</a>
+  <b>方法精要 v2.0</b> &nbsp;|&nbsp;
+  <a href="#p1">1 核心逻辑</a><a href="#p2">2 口径与数据源</a><a href="#p3">3 执行步骤</a><a href="#p4">4 质量与迭代</a>
+  &nbsp;<span style="color:#9fbde3">单独地址：/methodology.html</span>
+</div>
+
+<!-- ============ P1 核心逻辑 ============ -->
+<div class="page first" id="p1">
+  <div class="masthead">
+    <div class="eyebrow">NOVALEADS · B2B 数据补全工作流 · 方法精要 v2.0</div>
+    <h1>乌兹别克斯坦 B2B 决策人线索挖掘</h1>
+    <div class="sub">从「3000 条名单只出 1 个决策人」到「按翻页数线性放量」｜2026-11-14｜口径取自 v4 交付表</div>
+  </div>
+
+  <div class="chapter"><span class="no">01 · CORE LOGIC</span><h2>核心逻辑</h2></div>
+
+  <h3>1.1 诊断：不是额度问题，是三层错配</h3>
+  <table>
+    <tr><th style="width:15%">错配</th><th style="width:43%">表现</th><th>修正</th></tr>
+    <tr><td><b>国家路由</b></td><td>LinkedIn 职位库、Lusha 邮箱库偏英语/科技/欧美；乌国汽车进口商多为家族式中小企业，不在库里</td><td>换成本国工商登记 + 本地黄页 + 垂直交易平台 + 商会名录</td></tr>
+    <tr><td><b>数据源栈</b></td><td>姓名在工商「法定代表人」，电话在黄页 / 平台展厅，两者不在同一处</td><td>拆成「主体 / 身份 / 号码」三段分别取数，用主键合并</td></tr>
+    <tr><td><b>主体清洗</b></td><td>名单混着自然人名义进口、报关行、一台一单车商；这些没有采购决策链</td><td>先按 R01–R08 分流：自然人进 L3、报关行只留号码当引路人</td></tr>
+  </table>
+  <div class="box warn" style="margin:5pt 0 8pt 0">
+    <b>最容易踩的口径坑：</b>14 位代码一定是自然人；<b>9 位 STIR 里也混着自然人</b>，不能按长度判主体类型，必须结合名称 + 法律形式 + OKED 行业码一起判。
+  </div>
+
+  <h3>1.2 主线：把「找人」拆成四段</h3>
+  <table class="flow">
+    <tr>
+      <td style="width:23%">① 主体识别<br><span class="small">STIR / hash / 规范名</span></td><td class="arw">→</td>
+      <td style="width:23%">② 身份锁定<br><span class="small">工商 CEO / 创始人</span></td><td class="arw">→</td>
+      <td style="width:23%">③ 号码获取<br><span class="small">JSON-LD / SSR / 黄页</span></td><td class="arw">→</td>
+      <td style="width:23%">④ 交叉验证<br><span class="small">去重 / 分级 / 留痕</span></td>
+    </tr>
+  </table>
+  <p>每段换成本地真正有的公开源，再用同一主键串起来。决策人姓名只认<b>工商登记法定代表人字段</b>，电话只认<b>页面公开字段</b>，不靠联系人库拼。</p>
+
+  <h3>1.3 扩量引擎：种子池把一次性任务变成管线</h3>
+  <table class="flow">
+    <tr>
+      <td style="width:22%">深翻分页造种子<br><span class="small">17 精准词 + 38 品牌 × 55 页</span></td><td class="arw">→</td>
+      <td style="width:22%">抽 12 位企业 hash<br><span class="small">12,452 个待抓主体</span></td><td class="arw">→</td>
+      <td style="width:22%">按汽车相关度排序<br><span class="small">品牌/精准词优先</span></td><td class="arw">→</td>
+      <td style="width:22%">分批抓 + 断点续跑<br><span class="small">8 线程 / 每轮消费剩余</span></td>
+    </tr>
+  </table>
+  <p><b>线索量不再取决于名单，而取决于翻多少页。</b>种子池只造一次，后续每轮只是按新优先级消费剩余 hash，无需重新探路。</p>
+
+  <h3>1.4 结果</h3>
+  <table class="kpi">
+    <tr>
+      <td><span class="n">4,432</span><span class="l">独立企业主体</span></td>
+      <td><span class="n">2,420</span><span class="l">姓名+电话（L1）</span></td>
+      <td><span class="n">660</span><span class="l">A/B 严格对口</span></td>
+      <td><span class="n">4,335</span><span class="l">去重号码</span></td>
+    </tr>
+  </table>
+  <table>
+    <tr><th>轮次</th><th>突破口</th><th>独立主体</th><th>L1</th><th>A/B</th><th>本轮净新增</th></tr>
+    <tr><td>首批</td><td>STIR 直查 + 公司名反查（高价值 14 家命中 13 家）</td><td>307</td><td>189</td><td>192</td><td>—</td></tr>
+    <tr><td>v2</td><td>俄语词 + 中国品牌词，翻出拉丁词覆盖不到的池</td><td>1,353</td><td>631</td><td>403</td><td>1,407</td></tr>
+    <tr><td>v3</td><td>深翻 55 页 + 专属搜索 tab + 垂直平台展厅</td><td>2,776</td><td>1,427</td><td>533</td><td>1,335</td></tr>
+    <tr><td><b>v4</b></td><td>按汽车相关度消费剩余 9,725 个种子，抓 3,200 家</td><td><b>4,432</b></td><td><b>2,420</b></td><td><b>660</b></td><td><b>1,663</b></td></tr>
+  </table>
+  <p class="small">首批口径为线索条数，v2 起统一为按规范企业名去重的独立主体，两轮之间不可直接相减。</p>
+</div>
+
+<!-- ============ P2 口径与数据源 ============ -->
+<div class="page" id="p2">
+  <div class="chapter"><span class="no">02 · RULES &amp; SOURCES</span><h2>口径与数据源</h2></div>
+
+  <h3>2.1 三重主键（一切去重的基础）</h3>
+  <table>
+    <tr><th style="width:18%">主键</th><th style="width:27%">形态</th><th>用途 / 坑</th></tr>
+    <tr><td>STIR / TIN</td><td>9 位数字，<b>按文本存</b></td><td>防前导零丢失；9 位里混有自然人，不能单独判主体类型</td></tr>
+    <tr><td>企业 hash</td><td>12 位 16 进制 <code>dc3b1c29b069</code></td><td>orginfo 详情页 ID，跨轮抓取去重最可靠；从搜索页 HTML 正则批量抽</td></tr>
+    <tr><td>规范企业名</td><td>去法律形式 → 大写 → 只留 A-Z0-9</td><td>乌语拉丁 / 俄语西里尔 / 英文三名并存，<b>英文转写名绝不能当主键</b>；用于合并工商与黄页</td></tr>
+  </table>
+
+  <h3>2.2 两个维度别混：能不能触达 vs 是不是客户</h3>
+  <table>
+    <tr><th style="width:50%">覆盖层级（触达能力）</th><th>线索分级（对口程度）</th></tr>
+    <tr><td>
+      <b>L1</b> 姓名+电话齐备 → 验号后直接触达<br>
+      <b>L2</b> 有号缺名 → 总机转采购 / 销售负责人<br>
+      <b>L3</b> 身份锁定缺号 → 本地代理按姓名+地址补号<br>
+      <b>L4</b> 完全待补 → 不入主表
+    </td><td>
+      <b>A</b> 汽车贸易 / 经销（OKED 45）<br>
+      <b>B</b> 汽配 / 维修（OKED 46 / 47）<br>
+      <b>C</b> 名称无汽车特征词 → 待人工核 OKED<br>
+      <b>D</b> 驾校 / 协会 / 政府 / 院校 → <b>直接剔除</b>
+    </td></tr>
+  </table>
+  <div class="box">
+    <b>行业闸门：</b>OKED <code>45/46/47</code> 正向；<code>42/84/85/94/70/71/52</code>（公路局 / 驾校 / 研究所 / 协会）即使关键词命中也剔除；名称带 <code>AVTOSAVDO / AVTOSALON / MOTORS / ZAPCHAST / SHINA / DILER</code> 可豁免升 A/B。<br>
+    <b>号码规范：</b>统一 <code>+998 XX XXX XX XX</code>，只留 9 位有效号；短号 / 8 位残缺号降级不入表。<code>90/91/93/94/95/97/99/88/55</code> 手机段可验 TG/WA，<code>71/78/70</code> 固话只能会俄语者致电。
+  </div>
+
+  <h3>2.3 有效源与解析方式</h3>
+  <table>
+    <tr><th style="width:20%">源 / 入口</th><th style="width:31%">URL 模板 / 解析对象</th><th>拿到什么 · 实测结论</th></tr>
+    <tr><td><b>orginfo 工商详情</b> <span class="tag ok">主力</span></td><td class="src">/en/organization/&lt;12位hash&gt;/<br>JSON-LD <code>Organization</code></td><td><code>employee.name</code>=CEO、<code>founder[]</code>、telephone、email、taxID、OKED、状态。四轮累计 6,506 家，是姓名唯一稳定来源</td></tr>
+    <tr><td>orginfo STIR 反查</td><td class="src">/en/search/organizations/?q=&lt;STIR&gt;</td><td>68 个 TIN 命中 65 家（95.6%），拿 hash 进详情</td></tr>
+    <tr><td><b>orginfo 深翻分页</b> <span class="tag new">扩量</span></td><td class="src">?q=&lt;词&gt;&amp;page=1..55&amp;sort=default<br>HTML 正则抽 12 位 hash</td><td>3,025 个分页请求 → 12,452 个种子。实测 <code>?q=дилер&amp;page=50</code> 仍满页</td></tr>
+    <tr><td>orginfo 专属 tab</td><td class="src">/en/search/{phones,founders,managers}/?q=&lt;值&gt;</td><td>同号关联企业 / 自然人名下企业。只用默认 organizations tab 会误判「反查 0 命中」</td></tr>
+    <tr><td>yellowpages.uz</td><td class="src">/uz/korxona/&lt;slug&gt;<br>LocalBusiness JSON-LD</td><td>企业名 / 电话 / 邮箱 / 地址；<b>无负责人字段，姓名一律留空</b>。sitemap 共 25,174 slug</td></tr>
+    <tr><td>avtoelon.uz 官方展厅</td><td class="src">/yangi-avto/salonlar/ → 车型页公开 <code>__NUXT_DATA__</code></td><td>BFS 139 页得 38 家展厅名 + 电话 + 街道地址；Nuxt devalue 扁平数组需按索引递归解引用</td></tr>
+  </table>
+  <p class="small">另有两条高性价比补漏：公司名去法律形式反查（金额最大的 14 家命中 13 家）、官方经销商白名单（18 家，用于话术分层）。所有源均为公开页面，不登录、不绕鉴权、不用付费联系人库。</p>
+</div>
+
+<!-- ============ P3 执行步骤 ============ -->
+<div class="page" id="p3">
+  <div class="chapter"><span class="no">03 · EXECUTION</span><h2>执行步骤（按顺序，不要跳步）</h2></div>
+
+  <ol class="steps">
+    <li><b>洗名单 → 定主键</b>：按 TIN 去重（存文本），执行 R01–R08 分流自然人 / 报关行 / 一台一单；官方源核存在性与 active 状态。<span class="small">输出：干净的企业主体清单</span></li>
+    <li><b>STIR 直查工商</b>：<code>/search/organizations/?q=&lt;STIR&gt;</code> → hash → 详情 JSON-LD。<span class="small">输出：CEO / 创始人 / 电话 / OKED</span></li>
+    <li><b>造种子池</b>：精准行业词 + 品牌词深翻到分页上限，抽 12 位 hash，保留「词 + 页码」标签。<span class="small">先测分页上限，再决定要不要换源</span></li>
+    <li><b>按相关度分批抓详情</b>：优先级 = 整车/商用车品牌 + дилер/авто/шины 精准词 &gt; 泛贸易/物流/消费电子词；8 线程、每 25 条落盘、按 hash 全轮去重。<span class="small">输出：待抓池 + 已抓档案，可断点续跑</span></li>
+    <li><b>号码 / 姓名反查</b>：phones tab 查同号企业，founders / managers tab 查名下企业；姓名要求<b>全名（含父称）token 重合 ≥80%</b>，仅姓+名相同判同名不同人。</li>
+    <li><b>补渠道层</b>：avtoelon 官方展厅 + yellowpages 强相关页 + 公司名反查，覆盖工商/黄页都抓不到的展厅与经销体系。</li>
+    <li><b>三重去重 + 规范化</b>：hash（抓取层）→ 规范名 + 主号码（合并层）→ 独立主体（统计层）；号码 E.164、来源合并、双源交叉提置信度。</li>
+    <li><b>分级打标 → 验号 → 合规触达</b>：L1–L4 + A/B/C/D 打标，D 类剔除但留档；手机号先验 TG/WA，固话由会俄语者致电；保留退订 / 删除通道。</li>
+  </ol>
+
+  <h3>3.1 关键代码逻辑：种子池 + 续跑</h3>
+  <pre># ① 造种子：搜索页全文抽 hash，保留来源词与页码
+seeds[h] = f"{word} / p{page}"      # re.findall(r'/en/organization/[a-f0-9]{12}/', html)
+
+# ② 优先级：相关度高的先消费
+def prio(label):
+    w = label.split(' / p')[0]
+    if w in BRANDS or w in PRECISE: return 0      # 品牌 / дилер·авто·шины
+    if w in LOGISTICS or w in ELECTRONICS: return 2
+    return 1
+
+# ③ 断点续跑：已抓 hash 全轮累积，改 MAX 即可继续扩量
+done = {x['hash'] for f in RESULT_FILES for x in load(f) if x.get('hash')}
+targets = sorted((h for h in seeds if h not in done), key=lambda h: prio(seeds[h]))[:MAX]
+with ThreadPoolExecutor(max_workers=8) as ex:
+    records = list(ex.map(parse_detail, targets))   # 每 25 条落盘</pre>
+  <div class="box good">
+    <span class="bt">续跑命令（无需重新探路）</span>
+    <code>MAX=3000 WORKERS=8 python3 fetch_orginfo_round4.py</code> — 自动跳过已抓 hash。<br>
+    <code>MAX_PHONES=1508 python3 fetch_reverse_tabs.py</code> — 只让 OKED 45/46/47 的新主体入表。<br>
+    v4 抓完仍剩 <b>6,525 个种子</b>，但多为泛贸易 / 物流 / 消费电子词，相关度会低于本轮已抓批次。
+  </div>
+
+  <h3>3.2 换国家时替换这 6 张配置表</h3>
+  <table>
+    <tr><th style="width:20%">配置项</th><th>乌国取值</th><th style="width:20%">配置项</th><th>乌国取值</th></tr>
+    <tr><td>行业关键词</td><td>дилер / авто / шины / запчасти / автозапчасти + 38 品牌</td><td>行业码</td><td>OKED 45/46/47 正向</td></tr>
+    <tr><td>法律形式缩写</td><td>MCHJ / OOO / ООО / AJ / QK / XK / LLC</td><td>号段</td><td>+998，手机 90/91/93/94/95/97/99/88/55</td></tr>
+    <tr><td>姓名构成</td><td>姓 + 名 + 父称（同名率极高）</td><td>失败源清单</td><td>403 / 假参数 / 宽筛噪声</td></tr>
+  </table>
+</div>
+
+<!-- ============ P4 质量与迭代 ============ -->
+<div class="page" id="p4">
+  <div class="chapter"><span class="no">04 · QUALITY &amp; ITERATION</span><h2>质量闸门与迭代逻辑</h2></div>
+
+  <h3>4.1 五道闸门（不满足就不进主表）</h3>
+  <table>
+    <tr><th style="width:5%">#</th><th style="width:20%">闸门</th><th>规则</th></tr>
+    <tr><td>1</td><td>号码有效</td><td>只留 9 位有效号；短号 / 8 位残缺号降级；<code>@mail.ru</code> 是乌国常用真实邮箱，不能当占位符误杀</td></tr>
+    <tr><td>2</td><td>三层去重</td><td>hash → 规范名+主号码 → 独立主体；同主体多号标「同主体多号」，不重复计客户</td></tr>
+    <tr><td>3</td><td>行业相关</td><td>OKED 45/46/47 正向、42/84/85/94/70/71/52 剔除；无汽车特征词归 C 待判，不许冒充 A/B</td></tr>
+    <tr><td>4</td><td>身份校验</td><td>全名（含父称）token 重合 ≥80%；D 类驾校/协会/政府/院校剔除但完整留档</td></tr>
+    <tr><td>5</td><td>留痕</td><td>每条必带 <b>来源 URL + 数据时点 + 置信度 + 号段运营商 + 触达建议</b>；外呼前到 stat.uz 复核董事变更</td></tr>
+  </table>
+  <div class="box bad">
+    <span class="bt">两条硬红线</span>
+    ① <b>查不到就留空，绝不推定</b>：抽查 12 家无 CEO 的档案，源站明确写 <code>No data available</code>，不是解析漏抓；黄页同样无负责人字段。<br>
+    ② <b>失败路径不计入达标数字</b>：v4 黄页 496 页只让 31 家进主表，其余标「是否纳入主表=否」留在档案表。
+  </div>
+
+  <h3>4.2 四次「误判 → 修正」（最值得复用）</h3>
+  <table>
+    <tr><th style="width:18%">误判</th><th style="width:40%">实测</th><th>修正后的逻辑</th></tr>
+    <tr><td>翻到 p12 就以为没结果</td><td><code>?q=дилер&amp;page=50</code> 仍满页 10 条</td><td>换源之前先测分页上限</td></tr>
+    <tr><td>姓名 / 号码反查 0 命中</td><td>搜索其实有 organizations / founders / managers / phones 多 tab</td><td>按目标字段选对应 tab，不用默认 tab 反查</td></tr>
+    <tr><td>姓名命中就算同一人</td><td>7 条「命中」里 5 条父称不同，是同名不同人</td><td>全名 token 重合 ≥80% 才认</td></tr>
+    <tr><td>宽筛能凑量</td><td>黄页 495 家带号，严格判汽车相关只剩 31 家，其余是面包厂 / 银行网点 / 外国机构</td><td>宽筛池直接放弃，留痕但不计客户数</td></tr>
+  </table>
+
+  <h3>4.3 已证伪，不要再试</h3>
+  <p class="small">
+    <code>?oked=</code> 是假参数（所有值返回同样 8 条）｜goldenpages.uz、2gis.uz、myorg.uz 整站 403｜avtoelon 完整展厅 API 需私有 appKey、其他目录全 404（只有 <code>/yangi-avto/salonlar/</code> 有效）｜yellowpages 宽筛命中率 31/495｜自然人姓名反查 0 命中｜给「无负责人字段」档案补名不可能。<b>把死路写进台账，下一轮不重走。</b>
+  </p>
+
+  <h3>4.4 一句话逻辑 + 合规边界</h3>
+  <div class="box good">
+    把「找人」拆成四段、用本地主键串起来 → 用<b>深翻分页</b>把线索量做成可续跑的管线 → 用 <b>OKED + 名称特征词 + 全名校验</b> 守质量 → 用失败台账让下一轮不重走。
+  </div>
+  <p class="small">
+    <b>合规：</b>依据 ZRU-547 / ZRU-666 / ZRU-776 第 30 条，只采公开来源并留存来源与用途；Telegram bot 不得主动发起陌生对话，广告触达须事先同意；跨境传输评估「充分保护」或明示同意；仅用于 B2B 商务联络，不用于个人画像或转售。批量触达前请当地法务复核。
+  </p>
+  <p class="small">
+    <b>统计口径：</b>独立主体=按规范名去重；号码点=主表带有效号码行数；去重号码=按 E.164 去重；本轮净新增=本轮出现 + 不在上轮主表 + 来自本轮新采源（不含老主体字段更新）。
+  </p>
+
+  <div class="sig">
+    编制：NovaLeads 数据补全工作流 · 2026-11-14 · 精要版 v2.0（在 15 页完整版基础上压缩，只保留步骤与逻辑）<br>
+    数据来源：orginfo.uz、yellowpages.uz、avtoelon.uz 公开页面，采集日期 2026-11-14；登记摘录数据时点 2024–2026 不等。<br>
+    详细数字、URL 模板、检索词、脚本清单与 11 张交付表见《乌兹别克斯坦_第四轮扩量_全量可触达线索v4.xlsx》与《乌兹别克斯坦B2B决策人挖掘SOP.xlsx》。
+  </div>
+</div>
+
+</body>
+</html>
